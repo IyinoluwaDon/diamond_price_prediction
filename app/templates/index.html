@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Price Prediction</title>
+</head>
+<body>
+    <h1> This is the diamond price prediction model</h1>
+
+    <h2> Enter Values as mentioned: </h2>
+    <form action="/" method="POST">
+        <input type="text" name="cut" placeholder = "cut" >
+        
+
+        <input type="text" name="color" placeholder = "color" >
+        
+
+        <input type="text" name="clarity" placeholder = "clarity" >
+        
+
+        <input type="number" name="carat_weight" placeholder = "carat weight" step="any">
+        
+
+        <input type="text" name="cut_quality" placeholder = "cut quality" >
+        
+
+        <input type="text" name="lab" placeholder = "lab">
+        
+
+        <input type="text" name="symmetry" placeholder = "symmetry" >
+        
+
+        <input type="text" name="polish" placeholder = "polish" >
+        
+  
+        <input type="text" name="eye_clean" placeholder = "eye_clean" >
+        
+        <input type="text" name="culet_size" placeholder = "culet_size" >
+        
+ 
+        <input type="text" name="culet_condition" placeholder = "culet_condition" >
+        
+ 
+        <input type="number" name="depth_percent" placeholder = "depth_percent" step="any">
+        
+ 
+        <input type="number" name="table_percent" placeholder = "table_percent" step="any">
+        
+
+        <input type="number" name="meas_length" placeholder = "meas_length" step="any">
+        
+
+        <input type="number" name="meas_width" placeholder = "meas_width" step="any">
+        
+   
+        <input type="number" name="meas_depth" placeholder = "meas_depth"  step="any">
+        
+
+        <input type="text" name="girdle_min" placeholder = "girdle_min">
+        
+  
+        <input type="text" name="girdle_max" placeholder = "girdle_max">
+        
+ 
+        <input type="text" name="fluor_color" placeholder = "fluor_color">
+        
+
+        <input type="text" name="fluor_intensity" placeholder = "fluor_intensity">
+
+        <input type="text" name="fancy_color_dominant_color" placeholder = "fancy_color_dominant_color">
+
+ 
+        <input type="text" name="fancy_color_secondary_color" placeholder = "fancy_color_secondary_color">
+
+
+        <input type="text" name="fancy_color_overtone" placeholder = "fancy_color_overtone">
+
+
+        <input type="text" name="fancy_color_intensity" placeholder = "fancy_color_intensity">
+        <input type="submit">
+    </form>
+    {% if sale %}
+        <h2>Predicted Price: </h2>
+        {{sale}}
+    {% endif %}
+    
+</body>
+</html>
