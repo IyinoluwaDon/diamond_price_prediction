@@ -1,3 +1,5 @@
+> Current setup and limitations: see [RUNNING.md](RUNNING.md). The older research notes below retain the original experiment history.
+
 # Diamond Sales Price Prediction
 
 A deep learning web application that predicts the sales price of a diamond based on its physical and grading characteristics. Users input 24 diamond attributes through a Flask web interface and receive an instant price estimate from a trained TensorFlow neural network.
