@@ -1,5 +1,6 @@
 from pathlib import Path
 from functools import lru_cache
+import json
 import math
 import numpy as np
 
@@ -8,12 +9,15 @@ features = ['cut', 'color', 'clarity', 'carat_weight', 'cut_quality', 'lab', 'sy
 numeric = ['carat_weight', 'depth_percent', 'table_percent', 'meas_length', 'meas_width', 'meas_depth']
 
 @lru_cache(maxsize=1)
+def categories():
+    return json.loads((BASE_DIR / 'categories.json').read_text(encoding='utf-8'))
+
+@lru_cache(maxsize=1)
 def artifacts():
     try:
-        import joblib
         from tensorflow.keras.models import load_model
         model = load_model(BASE_DIR / 'tf_m_1.0.0.h5', compile=False)
-        encoders = {key: joblib.load(BASE_DIR / f'{key}.joblib') for key in features if key not in numeric}
+        encoders = categories()
         return model, encoders
     except Exception as exc:
         raise RuntimeError('Model or encoders could not be loaded. Install requirements.txt and use the bundled artifacts.') from exc
@@ -32,9 +36,9 @@ def predict_pipe(values):
     model, encoders = artifacts()
     for key, encoder in encoders.items():
         value = str(converted[key]).strip()
-        if value not in encoder.classes_:
+        if value not in encoder:
             raise ValueError(f'Unsupported value for {key}: choose one of the training categories.')
-        converted[key] = int(encoder.transform([value])[0])
+        converted[key] = encoder.index(value)
     row = np.asarray([[converted[key] for key in features]], dtype=np.float32)
     try:
         price = float(np.asarray(model(row, training=False)).reshape(-1)[0])

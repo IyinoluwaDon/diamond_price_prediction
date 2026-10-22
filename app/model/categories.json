@@ -1,0 +1,185 @@
+{
+  "clarity": [
+    "I1",
+    "I2",
+    "I3",
+    "IF",
+    "SI1",
+    "SI2",
+    "SI3",
+    "VS1",
+    "VS2",
+    "VVS1",
+    "VVS2"
+  ],
+  "color": [
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "unknown"
+  ],
+  "culet_condition": [
+    "Abraded",
+    "Chipped",
+    "Pointed",
+    "unknown"
+  ],
+  "culet_size": [
+    "EL",
+    "L",
+    "M",
+    "N",
+    "S",
+    "SL",
+    "VL",
+    "VS",
+    "unknown"
+  ],
+  "cut": [
+    "Asscher",
+    "Cushion",
+    "Cushion Modified",
+    "Emerald",
+    "Heart",
+    "Marquise",
+    "Oval",
+    "Pear",
+    "Princess",
+    "Radiant",
+    "Round"
+  ],
+  "cut_quality": [
+    "Excellent",
+    "Fair",
+    "Good",
+    "Ideal",
+    "Very Good",
+    "unknown"
+  ],
+  "eye_clean": [
+    "Borderline",
+    "E1",
+    "No",
+    "Yes",
+    "unknown"
+  ],
+  "fancy_color_dominant_color": [
+    "Black",
+    "Blue",
+    "Brown",
+    "Chameleon",
+    "Gray",
+    "Green",
+    "Orange",
+    "Other",
+    "Pink",
+    "Purple",
+    "Red",
+    "Yellow",
+    "unknown"
+  ],
+  "fancy_color_intensity": [
+    "Faint",
+    "Fancy",
+    "Fancy Dark",
+    "Fancy Deep",
+    "Fancy Intense",
+    "Fancy Light",
+    "Fancy Vivid",
+    "Light",
+    "Very Light",
+    "unknown"
+  ],
+  "fancy_color_overtone": [
+    "Brownish",
+    "Grayish",
+    "Greenish",
+    "Orangey",
+    "Pinkish",
+    "Purplish",
+    "Yellowish",
+    "unknown",
+    "nan"
+  ],
+  "fancy_color_secondary_color": [
+    "Blue",
+    "Brown",
+    "Gray",
+    "Green",
+    "Orange",
+    "Pink",
+    "Purple",
+    "Red",
+    "Violet",
+    "Yellow",
+    "unknown"
+  ],
+  "fluor_color": [
+    "Blue",
+    "Green",
+    "Orange",
+    "White",
+    "Yellow",
+    "unknown"
+  ],
+  "fluor_intensity": [
+    "Faint",
+    "Medium",
+    "Slight",
+    "Strong",
+    "Very Slight",
+    "Very Strong",
+    "unknown",
+    "nan"
+  ],
+  "girdle_max": [
+    "M",
+    "STK",
+    "STN",
+    "TK",
+    "TN",
+    "VTK",
+    "VTN",
+    "XTK",
+    "XTN",
+    "unknown"
+  ],
+  "girdle_min": [
+    "M",
+    "STK",
+    "STN",
+    "TK",
+    "TN",
+    "VTK",
+    "VTN",
+    "XTK",
+    "XTN",
+    "unknown"
+  ],
+  "lab": [
+    "GIA",
+    "HRD",
+    "IGI"
+  ],
+  "polish": [
+    "Excellent",
+    "Fair",
+    "Good",
+    "Poor",
+    "Very Good"
+  ],
+  "symmetry": [
+    "Excellent",
+    "Fair",
+    "Good",
+    "Poor",
+    "Very Good"
+  ]
+}

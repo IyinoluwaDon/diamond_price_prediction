@@ -7,6 +7,12 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 32 * 1024
 features = m.features
 
+@app.context_processor
+def form_context():
+    return {'fields': features, 'numeric_fields': m.numeric,
+            'categories': m.categories(), 'form_values': request.form}
+
+
 @app.route('/', methods=['GET','POST'])
 def hello():
     if request.method == 'GET':
