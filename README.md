@@ -55,8 +55,8 @@ Project Code/
 
 ## Dataset
 
-**File:** `diamonds.csv`  
-**Records:** ~219,000 diamond sales transactions  
+**File:** `diamonds.csv`
+**Records:** ~219,000 diamond sales transactions
 **Price range:** $200 – $1,449,881
 
 ### Features
@@ -94,10 +94,10 @@ Project Code/
 
 ## Model
 
-**Architecture:** TensorFlow / Keras Neural Network (regression)  
-**Loss function:** Mean Squared Error  
-**Optimizer:** Adam  
-**Serialization:** HDF5 (`.h5`)  
+**Architecture:** TensorFlow / Keras Neural Network (regression)
+**Loss function:** Mean Squared Error
+**Optimizer:** Adam
+**Serialization:** HDF5 (`.h5`)
 **Categorical encoding:** Scikit-learn `LabelEncoder`, one per categorical feature, saved as `.joblib` files
 
 ### Prediction Pipeline (`model.py`)
