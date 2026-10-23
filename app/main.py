@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, jsonify, render_template, request
 if __package__:
     from .model import model as m
 else:
@@ -6,6 +6,19 @@ else:
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 32 * 1024
 features = m.features
+
+@app.get('/healthz')
+def liveness():
+    return jsonify(status='ok'), 200
+
+@app.get('/readyz')
+def readiness():
+    try:
+        m.artifacts()
+    except RuntimeError:
+        app.logger.exception('Model readiness check failed')
+        return jsonify(status='unavailable'), 503
+    return jsonify(status='ready'), 200
 
 @app.context_processor
 def form_context():

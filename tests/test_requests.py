@@ -16,3 +16,13 @@ def test_nonfinite_values_rejected_before_model_load():
     for key in numeric:values[features.index(key)]='1'
     values[features.index('carat_weight')]='nan'
     with pytest.raises(ValueError):predict_pipe(values)
+
+def test_health_and_readiness(monkeypatch):
+    client=web.app.test_client()
+    assert client.get('/healthz').status_code==200
+    monkeypatch.setattr(web.m,'artifacts',lambda: (object(),{}))
+    assert client.get('/readyz').status_code==200
+    def unavailable(): raise RuntimeError('artifact load failed')
+    monkeypatch.setattr(web.m,'artifacts',unavailable)
+    response=client.get('/readyz')
+    assert response.status_code==503 and response.json=={'status':'unavailable'}
